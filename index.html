@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Devil's Advocate Pass — Strategy Gap-Check</title>
+<style>
+  :root {
+    --navy: #1f3864;
+    --ink: #1a1a1a;
+    --muted: #595959;
+    --border: #d8dce3;
+    --bg-soft: #f6f7fb;
+    --red: #c0392b;
+    --amber: #b8860b;
+    --green: #2e7d32;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 48px 24px 96px;
+    background: #ffffff;
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+  }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--navy);
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    padding: 4px 10px;
+    border-radius: 999px;
+    margin-bottom: 16px;
+  }
+  h1 {
+    font-size: 30px;
+    line-height: 1.25;
+    color: var(--navy);
+    margin: 0 0 8px;
+  }
+  .slot {
+    font-size: 15px;
+    color: var(--muted);
+    margin: 0 0 4px;
+  }
+  .job {
+    font-size: 16px;
+    margin: 20px 0 36px;
+    padding: 16px 18px;
+    background: var(--bg-soft);
+    border-left: 3px solid var(--navy);
+    border-radius: 4px;
+  }
+  h2 {
+    font-size: 19px;
+    color: var(--navy);
+    margin: 44px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  ul, ol {
+    padding-left: 22px;
+    margin: 0 0 8px;
+  }
+  li { margin-bottom: 10px; }
+  li strong { color: var(--ink); }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0 8px;
+    font-size: 14px;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--bg-soft);
+    color: var(--navy);
+    font-weight: 600;
+  }
+  .flag-row td:nth-child(3) { white-space: nowrap; }
+  .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 6px;
+    vertical-align: middle;
+  }
+  .dot.red { background: var(--red); }
+  .dot.amber { background: var(--amber); }
+  .dot.green { background: var(--green); }
+  .legend {
+    font-size: 13px;
+    color: var(--muted);
+    margin: 8px 0 0;
+  }
+  .legend span { margin-right: 18px; white-space: nowrap; }
+  pre {
+    background: #14161c;
+    color: #e6e8ef;
+    padding: 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-size: 13.5px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  .note {
+    font-size: 15px;
+    color: var(--muted);
+    margin-top: 8px;
+  }
+  .copy-btn {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--navy);
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .copy-btn:hover { background: #eceff5; }
+  footer {
+    margin-top: 56px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+<main>
+  <span class="eyebrow">Admosis / Dogged Connection — Working Framework</span>
+  <h1>Devil's Advocate Pass — Strategy Gap-Check</h1>
+  <p class="slot"><strong>Slot:</strong> Step 5.5 in the client strategy framework — after "Second-round synthesis," before the draft moves to production for the client deck.</p>
+
+  <p class="job"><strong>Job:</strong> find the weakest part of the strategy before a client or competitor does. This is not a rewrite and not a vibe check. It's a fixed set of adversarial questions the draft has to survive, run the same way every time so it can't be talked out of finding something.</p>
+
+  <h2>When to run it</h2>
+  <ul>
+    <li>Every time, after the second-round draft is produced — not optional, not "if there's time"</li>
+    <li>Mandatory when the draft "requires little editing" — that's precisely the moment scrutiny tends to drop</li>
+    <li>Especially important when: the fee or scope is increasing, you're recommending a channel change from the status quo, or the client is likely to have a skeptical stakeholder in the room</li>
+  </ul>
+
+  <h2>The checklist — fixed, don't skip an item even if the answer feels obvious</h2>
+  <ol>
+    <li><strong>Weakest assumption</strong> — what does this strategy depend on being true that hasn't actually been confirmed?</li>
+    <li><strong>Unproven claim</strong> — what's the most confident-sounding statement in the draft that isn't backed by a number, a source, or client-confirmed data?</li>
+    <li><strong>Competitor attack</strong> — if a rival agency saw this pitch, what's the first thing they'd pick apart?</li>
+    <li><strong>Missing client data</strong> — what would change this recommendation if we had client CRM, analytics, or sales data we don't currently have?</li>
+    <li><strong>Toughest stakeholder</strong> — if the most skeptical person in the client's room pushed back hard, which part collapses first?</li>
+    <li><strong>Comfort vs rigour</strong> — is this the most correct recommendation, or the most comfortable one to present? Where did the process choose ease over pressure-testing?</li>
+    <li><strong>What got dropped</strong> — what did an earlier round surface that quietly disappeared from this draft, and why?</li>
+  </ol>
+
+  <h2>Output format</h2>
+  <p>Not prose — a short table, so a Red can't hide in a paragraph:</p>
+  <table>
+    <thead>
+      <tr><th>#</th><th>Question</th><th>Flag</th><th>Why</th><th>What resolves it</th></tr>
+    </thead>
+    <tbody>
+      <tr class="flag-row">
+        <td>1</td>
+        <td>Weakest assumption</td>
+        <td><span class="dot red"></span><span class="dot amber"></span><span class="dot green"></span></td>
+        <td>—</td>
+        <td>—</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="legend">
+    <span><span class="dot red"></span>Red — must be resolved or explicitly accepted as a known risk before production</span>
+    <span><span class="dot amber"></span>Amber — needs a one-line owner note</span>
+    <span><span class="dot green"></span>Green — needs nothing further</span>
+  </p>
+
+  <h2>The prompt — paste into Claude / Cowork against the draft + original client brief</h2>
+  <pre id="promptBlock">Act as Devil's Advocate. You are reviewing [strategy draft v2] against [the original
+client brief]. Your only job is to find where this strategy is weakest — not to
+improve it, not to rewrite it, not to soften the finding.
+
+Work through this fixed checklist in order. Do not skip an item even if it looks
+clearly fine — every item needs an explicit answer, not a pass.
+
+1. Weakest assumption — what does this strategy depend on being true that hasn't
+   actually been confirmed?
+2. Unproven claim — what's the most confident-sounding statement in the draft that
+   isn't backed by a number, a source, or client-confirmed data?
+3. Competitor attack — if a rival agency saw this pitch, what's the first thing
+   they'd pick apart?
+4. Missing client data — what would change this recommendation if we had client
+   CRM, analytics, or sales data we don't currently have?
+5. Toughest stakeholder — if the most skeptical person in the client's room pushed
+   back hard, which part collapses first?
+6. Comfort vs rigour — is this the most correct recommendation, or the most
+   comfortable one to present? Where did the process choose ease over
+   pressure-testing?
+7. What got dropped — what did an earlier round surface that quietly disappeared
+   from this draft, and why?
+
+Output a markdown table: # | Question | Flag (Red/Amber/Green) | Why | What
+resolves it. Cite the actual line or claim you're challenging — don't generalise.
+If you genuinely can't find a weakness for an item, say so plainly rather than
+inventing one. A false positive wastes this pass as much as a missed one does.</pre>
+  <button class="copy-btn" onclick="copyPrompt()">Copy prompt</button>
+
+  <h2>A note on calibration</h2>
+  <p class="note">If this pass comes back clean — no reds, no ambers — across several client strategies in a row, treat that as a signal to check, not a compliment to accept. Either the upstream steps (research, Cowork review, NotebookLM insight) are genuinely tight, or the checklist itself has gone soft. Revisit the seven questions every quarter and sharpen anything that's stopped finding real issues.</p>
+
+  <footer>Admosis / Dogged Connection — internal working framework. Not for client distribution.</footer>
+</main>
+
+<script>
+  function copyPrompt() {
+    const text = document.getElementById('promptBlock').innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      const btn = document.querySelector('.copy-btn');
+      const original = btn.textContent;
+      btn.textContent = 'Copied';
+      setTimeout(() => { btn.textContent = original; }, 1500);
+    });
+  }
+</script>
+</body>
+</html>
